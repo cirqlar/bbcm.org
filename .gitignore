@@ -17,3 +17,7 @@
 /yarn-error.log
 
 .byebug_history
+
+# Ignore sensitive infotmation
+db/seeds.rb
+config/database.yml
