@@ -1,2 +1,4 @@
-%h1 News#show
-%p Find me in app/views/news/show.html.haml
+.news
+  %p= @news.id
+  %p= "Title #{@news.title.capitallize}"
+  %p= "Message #{@news.message}"

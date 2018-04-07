@@ -1,2 +1,8 @@
-%h1 News#index
-%p Find me in app/views/news/index.html.haml
+- unless @news_p.blank?
+  - @news_p.each do |news|
+    .news
+      %p= news.id
+      %p= "Title #{news.title.capitallize}"
+      %p= "Message #{news.message}"
+- else
+  %p Nooooooo news
