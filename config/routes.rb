@@ -2,9 +2,8 @@ Rails.application.routes.draw do
 
   #Gallery routes
   get 'gallery', to: 'images#index'
-  get 'gallery/:id', to: 'images#show', as: 'image'
   authenticate :admin do
-    resources :images, except: [:index, :show]
+    resources :images, except: [:index]
   end
 
   # Admin routes

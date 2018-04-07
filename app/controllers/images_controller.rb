@@ -35,7 +35,7 @@ class ImagesController < ApplicationController
 
   def destroy
     if @image.destroy
-      redirect_to root_path
+      redirect_to gallery_path
     else
       redirect_to @image
     end
