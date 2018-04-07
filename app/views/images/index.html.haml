@@ -1,0 +1,5 @@
+- unless @images.blank?
+  - @images.each do |image|
+    = image_tag image.image.url
+- else
+  %p Noooooooooo images

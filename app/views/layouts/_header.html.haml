@@ -1,0 +1,11 @@
+%nav.navbar.navbar-expand-md.sticky-top.navbar-dark.bg-dark.px-5.py-3.mb-3
+  .container-fluid.px-md-5
+    %a.navbar-brand{ href: '#' }
+      TheBBCM
+    %button.navbar-toggler{ type: 'button', data: { toggle: 'collapse', target: '#navbar'}, aria: { controls: 'navbar', expanded: 'false', label: 'Toggle navigation'} }
+      %span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbar
+      .navbar-nav.ml-auto
+        = link_to "Home", 'root_path', class: 'nav-item nav-link active'
+        = link_to "Gallery", gallery_path, class: 'nav-item nav-link active'
+        = link_to "Messages", gallery_path, class: 'nav-item nav-link active'

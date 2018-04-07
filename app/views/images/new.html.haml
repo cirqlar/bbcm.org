@@ -1,0 +1,12 @@
+.card.col-md-6.col-lg-4.col-10.mx-auto.p-0
+  .card-header
+    Upload Image
+  .card-body.px-3
+    = simple_form_for @image, html: { multipart: true, class: '' } do |f|
+      = f.file_field :image, class: 'mb-3'
+      = f.input :event, wrapper_html: { class: 'form-inline' }, label_html: { class: 'col-sm-3 col-form-label px-0 justify-content-start' }, input_html: { class: 'col-sm-9' }
+      = f.input :people, wrapper_html: { class: 'form-inline' }, label_html: { class: 'col-sm-3 col-form-label px-0 justify-content-start' }, input_html: { class: 'col-sm-9' }
+      = f.submit "Upload image", class: 'btn btn-primary btn-block'
+
+
+= link_to 'Sign out', destroy_admin_session_path, method: :delete

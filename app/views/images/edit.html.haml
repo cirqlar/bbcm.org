@@ -1,0 +1,8 @@
+.card.col-md-6.col-lg-4.col-10.mx-auto.p-0
+  .card-header
+    Upload Image
+  .card-body.px-3
+    = simple_form_for @image do |f|
+      = f.input :event, wrapper_html: { class: 'form-inline' }, label_html: { class: 'col-sm-3 col-form-label px-0 justify-content-start' }, input_html: { class: 'col-sm-9' }
+      = f.input :people, wrapper_html: { class: 'form-inline' }, label_html: { class: 'col-sm-3 col-form-label px-0 justify-content-start' }, input_html: { class: 'col-sm-9' }
+      = f.submit "Update Info", class: 'btn btn-primary btn-block'
