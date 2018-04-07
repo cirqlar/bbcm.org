@@ -21,3 +21,6 @@
 # Ignore sensitive infotmation
 db/seeds.rb
 config/database.yml
+
+# Ignore uploads
+public/uploads/*
