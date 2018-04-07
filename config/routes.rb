@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
-  #Gallery routes
+  # Gallery routes
   get 'gallery', to: 'images#index'
   resources :images, except: [:index]
+
+  # News routes
+  resources :news
 
   # Admin routes
   devise_for :admins

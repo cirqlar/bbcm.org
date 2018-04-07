@@ -1,0 +1,8 @@
+.card.col-md-6.col-lg-4.col-10.mx-auto.p-0
+  .card-header
+    Edit News
+  .card-body.px-3
+    = simple_form_for @news do |f|
+      = f.input :title, wrapper_html: { class: 'form-inline' }, label_html: { class: 'col-sm-3 col-form-label px-0 justify-content-start' }, input_html: { class: 'col-sm-9' }
+      = f.input :message
+      = f.submit "Edit news", class: 'btn btn-primary btn-block'
