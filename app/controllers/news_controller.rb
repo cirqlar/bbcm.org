@@ -1,4 +1,5 @@
 class NewsController < ApplicationController
+  before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
   before_action :get_news, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -43,7 +44,7 @@ class NewsController < ApplicationController
   private
 
     def get_news
-      @news = News.find_by(params[:id])
+      @news = News.find(params[:id])
     end
 
     def news_params

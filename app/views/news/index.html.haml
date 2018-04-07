@@ -1,8 +1,5 @@
 - unless @news_p.blank?
   - @news_p.each do |news|
-    .news
-      %p= news.id
-      %p= "Title #{news.title.capitallize}"
-      %p= "Message #{news.message}"
+    = render news
 - else
   %p Nooooooo news

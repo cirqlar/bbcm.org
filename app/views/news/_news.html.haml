@@ -1,0 +1,7 @@
+.news
+  %p= news.id
+  %p= "Title: #{news.title.capitalize}"
+  %p= "Message: #{news.message}"
+  .links
+    = link_to 'Edit News', edit_news_path(news)
+    = link_to 'Delete News', news, method: :delete
